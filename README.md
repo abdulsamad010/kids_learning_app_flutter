@@ -1,159 +1,124 @@
-````markdown
-# Kids Learning App – Flutter
+# 🎓 Kids Learning App – Flutter
 
-A Flutter-based educational application developed as the **first project task** of the **Humaitec 12-Week Software Development Internship**.
+<p align="center">
+  <img src="https://img.shields.io/badge/Flutter-Framework-02569B?logo=flutter&logoColor=white" alt="Flutter">
+  <img src="https://img.shields.io/badge/Dart-Language-0175C2?logo=dart&logoColor=white" alt="Dart">
+  <img src="https://img.shields.io/badge/Material%20Design-UI-757575?logo=materialdesign&logoColor=white" alt="Material Design">
+  <img src="https://img.shields.io/badge/Platform-Android%20%7C%20Web-34A853?logo=googlechrome&logoColor=white" alt="Platform">
+</p>
 
-This project is a **3-week project assignment** within the overall 12-week internship.
+<p align="center">
+  <strong>Interactive Educational Learning Application for Children</strong>
+</p>
 
-## Project Overview
+<p align="center">
+  Developed as the <strong>First Project Task</strong> of the <strong>Humaitec 12-Week Internship</strong>
+</p>
 
-The Kids Learning App is designed to provide children with an interactive learning experience through subjects, lessons, educational content, quizzes, and learning progress.
+---
 
-## Features
+## 📚 Project Overview
 
-- Subject and lesson navigation
-- Structured lesson content
-- Multiple Choice quizzes
-- True/False quizzes
-- Matching quizzes
-- One quiz attempt per lesson
-- Question and answer handling
-- Quiz scoring and percentage calculation
-- Pass/fail evaluation
-- Level calculation and level progression
-- Learning reports
-- User learning progress
-- Responsive Flutter UI
-- Animated and interactive components
-- Local dummy data for development and demonstration
-- API-ready service structure
+**Kids Learning App** is a Flutter-based educational application designed to provide children with a structured and interactive learning experience.
 
-## Quiz System
+The application organizes educational content into **subjects, lessons, lesson steps, quizzes, results, learning reports, and progress tracking**.
+
+This repository contains the development work for the **first three-week project task** within the overall **12-week Humaitec internship**.
+
+---
+
+## ✨ Key Features
+
+### 📖 Subjects & Lessons
+
+- Subject-based learning structure
+- Lesson listing for each subject
+- Individual lesson content
+- Step-by-step lesson navigation
+- Lesson progress tracking
+- Responsive lesson interfaces
+
+### 🧠 Interactive Quizzes
 
 The application supports three quiz types:
 
-- Multiple Choice
-- True/False
-- Matching
+- 📝 Multiple Choice
+- ✅ True or False
+- 🔄 Matching
 
-Each quiz type has a dedicated interface and interaction flow.
+Each quiz type has a dedicated interactive interface.
 
-Only **one quiz can be attempted per lesson** to ensure that the lesson result and progress are based on a single quiz attempt.
+### 🔒 One Quiz Attempt Per Lesson
 
-## Level System
+For each lesson, the user can select **only one quiz type and attempt it once**.
 
-| Percentage | Level |
-|------------|-------|
-| 0–39% | Level 1 |
-| 40–59% | Level 2 |
-| 60–79% | Level 3 |
-| 80–100% | Level 4 |
+After completing a quiz:
 
-A quiz is considered passed with a score of **50% or higher**.
+- The quiz result is saved
+- The lesson progress is updated
+- Other quiz types are blocked for that lesson
+- The user proceeds to the learning report
 
-## Application Flow
+This keeps the lesson assessment consistent and prevents multiple quiz attempts from affecting the final learning result.
+
+### 📊 Quiz Results
+
+The application tracks and displays:
+
+- ⭐ Score
+- 📋 Total questions
+- 📈 Percentage
+- ✅ Correct answers
+- 🎯 Pass/fail status
+- ⬅️ Previous level
+- ⭐ Current level
+- 📊 Level change
+- 📝 Quiz type
+- ✔️ Selected answers
+
+### 📑 Learning Report
+
+After completing the selected quiz, the application provides a learning report showing the user's:
+
+- Quiz performance
+- Score percentage
+- Learning status
+- Previous level
+- Current level
+- Progress information
+
+### 📈 Learning Progress
+
+The application maintains progress information including:
+
+- Current level
+- Score
+- Completed quizzes
+- Total quizzes
+- Progress percentage
+- Learning status
+- Last quiz result
+- Last lesson progress
+
+---
+
+## 🎯 Learning Flow
 
 ```text
-Home
-  ↓
-Subjects
-  ↓
-Lessons
-  ↓
-Lesson Content
-  ↓
-Quiz Selection
-  ↓
-One Quiz Attempt
-  ↓
-Quiz Result
-  ↓
-Learning Report
-  ↓
-Progress
-````
-
-## Project Structure
-
-```text
-lib/
-├── main.dart
-│
-└── features/
-    ├── content/
-    │   ├── data/
-    │   │   └── dummy_data.dart
-    │   ├── models/
-    │   ├── screens/
-    │   ├── services/
-    │   └── widgets/
-    │
-    └── quiz/
-        ├── data/
-        │   └── dummy_data.dart
-        ├── models/
-        ├── screens/
-        ├── services/
-        └── widgets/
-```
-
-## Data Handling
-
-The application uses service classes for content and quiz data.
-
-The current implementation includes local dummy data for:
-
-* Subjects
-* Lessons
-* Lesson steps
-* Quizzes
-* Questions
-* Answers
-* Quiz progress
-* User progress
-
-The service layer is structured to support backend API integration. If the API is unavailable, the application falls back to the local dummy data for development and demonstration.
-
-## Technologies
-
-* Flutter
-* Dart
-* Material 3
-* HTTP
-* JSON
-* Git
-* GitHub
-* Android Studio
-
-## Getting Started
-
-### Install Dependencies
-
-```bash
-flutter pub get
-```
-
-### Run on Android
-
-```bash
-flutter run
-```
-
-### Run on Chrome
-
-```bash
-flutter run -d chrome
-```
-
-## Internship Context
-
-**Organization:** Humaitec
-**Internship:** 12-Week Software Development Internship
-**Project:** First Project Task
-**Project Duration:** 3 Weeks
-**Technology:** Flutter / Dart
-
-This repository contains the development work for the first three-week project task completed as part of the Humaitec internship.
-
-```
-```
+🏠 Home
+   ↓
+📚 Select Subject
+   ↓
+📖 Select Lesson
+   ↓
+📘 Lesson Content
+   ↓
+🧠 Quiz Selection
+   ↓
+✏️ One Quiz Attempt
+   ↓
+📊 Quiz Result
+   ↓
+📑 Learning Report
+   ↓
+📈 Progress
